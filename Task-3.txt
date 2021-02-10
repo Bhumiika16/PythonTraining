@@ -1,0 +1,110 @@
+1 - Create a list of 10 elements of four different data types like int, string, complex and float.
+
+mylist = [2 , 'b' , 2.5 , 3+4j , 7 , 6.7 , 'a' , 100 , 2+9j , 11]
+
+
+2 - Create a list of size 5 and execute the slicing structure 
+
+mylist = [1 , 2 , 3 , 4 , 5]
+print(mylist[1:4:2])
+
+
+3 - Write a program to get the sum and multiply of all the items in a given list.
+
+mylist = [1,2,3,4,5,6,7,8,9,10]
+add = 0
+multiply = 1
+for i in mylist:
+    add += i
+    multiply *= i
+print("Sum of elements :",add)
+print("Multiplication of all elements : ",multiply)
+
+
+4 - Find the largest and smallest number from a given list.
+
+mylist = [7,2,3,4,5,6,70,8,9,10]
+greatest , smallest = mylist[0] , mylist[0]
+for i in mylist:
+    if(greatest < i):
+        greatest = i
+    elif(smallest > i):
+        smallest = i
+print("Greatest number : ",greatest)
+print("Smallest number : ",smallest)
+
+
+5 - Create a new list which contains the specified numbers after removing the even numbers from a predefined list. 
+
+l = list(map(int,input().split()))
+n = len(l)
+even = []
+odd = []
+i = 0
+while n>0:
+    if(l[i]%2==0):
+        even.append(l[i])
+        l.remove(l[i])
+        i = 0
+    else:
+        odd.append(l[i])
+        l.remove(l[i])
+        i = 0
+    n = n - 1
+print(even,odd)
+
+
+
+6 - Create a list of elements such that it contains the squares of the first and last 5 elements between 1 and30 (both included)
+
+mylist = []
+for i in range(1,31):
+    if(i <= 5 or i >= 25):
+        mylist.append(i*i)
+print(mylist)
+
+
+7 -  Write a program to replace the last element in a list with another list.
+
+x = list(map(int, input().split(" ")))
+y = list(map(int, input().split(" ")))
+for i in range(len(x)):
+    if(i == len(x)-1):
+        x.remove(x[i])
+        for j in range(len(y)):
+            x.append(y[j])
+print(x)
+
+
+8 - Create a new dictionary by concatenating the following two dictionaries.
+    Sample input: a={1:10,2:20} b={3:30,4:40}
+    Expected output: {1:10,2:20,3:30,4:40}
+
+dict1 = {1:10,2:20} 
+dict2 = {3:30,4:40}
+dict1.update(dict2)
+print(dict1)
+
+
+9 - Create a dictionary that contain numbers in the form(x:x*x) where x takes all the values between 1 and n(both 1 and n included).
+      Sample input: n=5
+      Expected output: {1:1, 2:4, 3:9, 4:16, 5:25}
+
+dictionary = {}
+n = int(input())
+for i in range(1,n+1):
+    dictionary[i] = i*i
+print(dictionary)
+
+
+10 - Write a program which accepts a sequence of comma-separated numbers from console and generates a list and a tuple which contains every number in the form of string.
+
+mylist = list(map(str,input().split(",")))
+mytuple = tuple(mylist)
+print(mylist,mytuple)
+
+
+
+
+
+
